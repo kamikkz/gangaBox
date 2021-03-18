@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class CategoriaFactory extends Factory
 {
@@ -22,7 +23,7 @@ class CategoriaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'categoryName' => Str::random(10)
         ];
     }
 }
