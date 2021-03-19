@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/categoria', function () {
+Route::get('/categorias', function () {
     return view('categoria');
 });
-Route::get('/', function () {
+Route::get('/productos', function () {
     return view('producto');
+});
+Route::get('/', function () {
+    return view('dashboard');
 });

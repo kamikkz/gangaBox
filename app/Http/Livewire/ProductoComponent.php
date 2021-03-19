@@ -102,7 +102,6 @@ class ProductoComponent extends Component
                 foreach($posiciones as $posicion){
                     if($posicion->id!=$this->producto_id){
                         $nvaPosicion=Producto::find($posicion->id);
-                        $out->writeln($nvaPosicion);
                         $nvaPosicion->update([
                             'productName'       =>$nvaPosicion->productName,
                             'productPrice'      =>$nvaPosicion->productPrice,
