@@ -14,12 +14,14 @@
                 </button>
             </li>
             @endforeach
-
           <li class="nav-item">
             <a class="nav-link" href="#">Categorías</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Orden de Productos</a>
           </li>
         </ul>
       </div>

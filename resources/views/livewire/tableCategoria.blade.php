@@ -1,4 +1,7 @@
 <h2>Listado de Categorias</h2>
+<button  wire:click="export()" class="btn btn-dark btn-block" >
+    Exportar
+</button>
 <table class="table">
     <thead>
         <tr>

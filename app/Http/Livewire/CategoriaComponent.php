@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Categoria;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\Exports;
 
 class CategoriaComponent extends Component
 {
@@ -28,6 +30,7 @@ class CategoriaComponent extends Component
         Categoria::create([
             'categoryName'=> $this->categoryName
         ]);
+        $this->default();
     }
 
     public function edit($id)
@@ -59,5 +62,10 @@ class CategoriaComponent extends Component
     {
         $this->categoryName = '';
         $this->view = 'createCategoria';
+    }
+
+    public function export()
+    {
+        return Excel::download(new Exports,'categorias.xlsx');
     }
 }

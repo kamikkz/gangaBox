@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/categorias', function () {
     return view('categoria');
 });
