@@ -10,7 +10,7 @@ class CategoriaComponent extends Component
 {
     use WithPagination;
 
-    public $categoryName;
+    public $categoria_id, $categoryName;
     public $view = 'createCategoria';
 
     public function render()
@@ -30,8 +30,34 @@ class CategoriaComponent extends Component
         ]);
     }
 
+    public function edit($id)
+    {
+        $categoria=Categoria::find($id);
+        $this->categoria_id = $categoria->id;
+        $this->categoryName = $categoria->categoryName;
+        $this->view = 'editCategoria';
+    }
+
+    public function update()
+    {
+        $this->validate([
+            'categoryName'=>'required'
+        ]);
+        $categoria=Categoria::find($this->categoria_id);
+        $categoria->update([
+            'categoryName'=> $this->categoryName
+        ]);
+        $this->default();
+    }
+
     public function destroy($id)
     {
         Categoria::destroy($id);
+    }
+
+    public function default()
+    {
+        $this->categoryName = '';
+        $this->view = 'createCategoria';
     }
 }

@@ -23,7 +23,11 @@
             <span>{{$message}}</span>
         @enderror
 
-
+        <label>Posición</label>
+        <input type="number" class="form-control" wire:model="productPosition">
+        @error('productPosition')
+            <span>{{$message}}</span>
+        @enderror
 
         <label>categoria_id</label>
         <select class="form-control" wire:model="categoria_id">

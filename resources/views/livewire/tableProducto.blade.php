@@ -25,9 +25,9 @@
                 </td>
                 <td>{{$producto->productCode}}</td>
                 <td>{{$producto->productPosition}}</td>
-                <td>{{$producto->categoria_id}}</td>
+                <td>{{$producto->categoria->categoryName}}</td>
                 <td>
-                    <button  wire:click="modify({{$producto->id}})" class="btn btn-primary" >
+                    <button  wire:click="edit({{$producto->id}})" class="btn btn-primary" >
                         Editar
                     </button>
                 </td>

@@ -13,7 +13,7 @@
                 <td>{{$categoria->id}}</td>
                 <td>{{$categoria->categoryName}}</td>
                 <td>
-                    <button  wire:click="modify({{$categoria->id}})" class="btn btn-primary" >
+                    <button  wire:click="edit({{$categoria->id}})" class="btn btn-primary" >
                         Editar
                     </button>
                 </td>
