@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Categoria;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Exports\Exports;
+use App\Exports\CategoriaExcelExports;
 
 class CategoriaComponent extends Component
 {
@@ -66,6 +66,6 @@ class CategoriaComponent extends Component
 
     public function export()
     {
-        return Excel::download(new Exports,'categorias.xlsx');
+        return Excel::download(new CategoriaExcelExports,'categorias.xlsx');
     }
 }

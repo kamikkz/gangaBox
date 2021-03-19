@@ -6,7 +6,7 @@ use App\Models\Categoria;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Illuminate\Support\Facades\DB;
 
-class Exports implements FromCollection
+class CategoriaExcelExports implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection

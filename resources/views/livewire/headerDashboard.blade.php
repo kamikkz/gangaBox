@@ -15,13 +15,13 @@
             </li>
             @endforeach
           <li class="nav-item">
-            <a class="nav-link" href="#">Categorías</a>
+            <a class="nav-link" href="{{ url('/categorias') }}">Categorías</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+            <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Orden de Productos</a>
+            <a class="nav-link" href="{{ url('/operations') }}">Orden de Productos</a>
           </li>
         </ul>
       </div>

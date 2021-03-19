@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/operations', function () {
+    return view('operation');
+});
 Route::get('/categorias', function () {
     return view('categoria');
 });
