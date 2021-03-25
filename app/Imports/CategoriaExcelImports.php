@@ -28,26 +28,29 @@ class CategoriaExcelImports implements OnEachRow
 
         $this->auxCont = 0;
         $categorias=Categoria::all();
-        foreach($categorias as $key=>$categoria){
+        foreach($categorias as $categoria){
             if ($categoria->categoryName == $row[0]) {
+
                 $producto = Producto::create([
                     'productName'=> 'TEST',
                     'productPrice'=> 0.0,
-                    'productImgUrl'=>'imagenPendiente',
+                    'productImgUrl'=>'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Imagen_no_disponible.svg/1200px-Imagen_no_disponible.svg.png',
                     'productCode'=>$row[1],
                     'productPosition'=>$row[2],
                     'categoria_id'=>$categoria->id
                 ]);
                 $this->producto = $producto;
             } else {
-                $this->auxCont = 1;
+                Categoria::firstOrCreate([
+                    'categoryName' => $row[0],
+                ]);
             }
         } //Valida foreach
-        if($this->auxCont>0){
+        /*if($this->auxCont>0){
             $nvaCategoria = Categoria::firstOrCreate([
                 'categoryName' => $row[0],
             ]);
-        }
+        }*/
 
 
     }
