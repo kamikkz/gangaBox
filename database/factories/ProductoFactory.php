@@ -24,10 +24,10 @@ class ProductoFactory extends Factory
         return [
             'productName' => $this->faker->lexify('## productName - ???'),
             'productPrice'  => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 200),
-            'productImgUrl'  => $this->faker->imageUrl('cats'),
+            'productImgUrl'  => 'http://static1.squarespace.com/static/5253327ee4b03949ba51bd5b/52572567e4b0fdbc78294489/52572e00e4b0fdbc7829c474/1381445120589/new1.gif?format=1500w',
             'productCode'  => $this->faker->numerify('gangaBox-###'),
-            'productPosition'  => $this->faker->randomFloat($nbMaxDecimals = 0, $min = 1, $max = 4),
-            'categoria_id' => $this->faker->numerify(1)
+            'productPosition'  => $this->faker->randomFloat($nbMaxDecimals = 0, $min = 10, $max = 400),
+            'categoria_id' => 1
         ];
     }
 }

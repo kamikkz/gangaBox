@@ -54,11 +54,9 @@ class CategoriaExcelImports implements OnEachRow
                     $this->producto = $oldProduct;
                 }
             } else {
-                $nvaCategoria = Categoria::Create([
+                Categoria::firstOrCreate([
                     'categoryName' => $row[0],
                 ]);
-                $this->producto = $nvaCategoria;
-
             }
         }
     }
